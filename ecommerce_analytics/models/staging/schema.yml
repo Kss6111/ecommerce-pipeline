@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: stg_orders
+    columns:
+      - name: ORDER_ID
+        tests:
+          - not_null
+          - unique
+      - name: CUSTOMER_ID
+        tests:
+          - not_null
+      - name: ORDER_STATUS
+        tests:
+          - not_null
+
+  - name: stg_order_items
+    columns:
+      - name: ORDER_ID
+        tests:
+          - not_null
+      - name: PRODUCT_ID
+        tests:
+          - not_null
+      - name: SELLER_ID
+        tests:
+          - not_null
+
+  - name: stg_customers
+    columns:
+      - name: CUSTOMER_ID
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_order_payments
+    columns:
+      - name: ORDER_ID
+        tests:
+          - not_null
+      - name: PAYMENT_VALUE
+        tests:
+          - not_null
+
+  - name: stg_order_reviews
+    columns:
+      - name: REVIEW_ID
+        tests:
+          - not_null
+      - name: REVIEW_SCORE
+        tests:
+          - not_null
+
+  - name: stg_sellers
+    columns:
+      - name: SELLER_ID
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_products
+    columns:
+      - name: PRODUCT_ID
+        tests:
+          - not_null
+          - unique

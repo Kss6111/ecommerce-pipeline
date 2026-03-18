@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    database: ECOMMERCE_DB
+    schema: RAW
+    tables:
+      - name: RAW_ORDERS
+      - name: RAW_ORDER_ITEMS
+      - name: RAW_ORDER_PAYMENTS
+      - name: RAW_ORDER_REVIEWS
+      - name: RAW_CUSTOMERS
+      - name: RAW_SELLERS
+      - name: RAW_PRODUCTS
+      - name: RAW_CATEGORY_TRANSLATION
+      - name: RAW_GEOLOCATION
