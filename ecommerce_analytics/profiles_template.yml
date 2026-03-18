@@ -1,0 +1,14 @@
+# Copy this to ~/.dbt/profiles.yml and fill in your credentials
+ecommerce_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: YOUR_ACCOUNT_IDENTIFIER
+      user: YOUR_USERNAME
+      password: YOUR_PASSWORD
+      role: ACCOUNTADMIN
+      warehouse: ECOMMERCE_WH
+      database: ECOMMERCE_DB
+      schema: STAGING
+      threads: 4
